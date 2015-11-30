@@ -1,1 +1,1 @@
-$("textarea").on("focusout",function o(){console.log($(this).val())});
+var text="";$("textarea").on("focusout",function t(){console.log($(this).val()),text=$(this).val().split("/\n")}),text.split("/\n"),console.log(text);var parse=function(){var t=$("textarea").val(),o=t.split("\n");$.each(o,function(t,o){console.log(o)})};$(function(){$("button").on("click",parse)});
