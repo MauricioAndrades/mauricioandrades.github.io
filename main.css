@@ -343,3 +343,10 @@ ul {
   padding: 21px 60px 19px;
   margin-top: 1px;
 }
+
+/*TXTAREA*/
+
+#txtarea {
+  background-color: #FF4E78;
+  font-size: inherit;
+}

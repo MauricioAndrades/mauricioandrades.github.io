@@ -13,7 +13,7 @@ var openMenu = function() {
 };
 
 // reveal content of first panel by default
-panel.eq(0).find('.panel__content').addClass('panel__content--active');
+// panel.eq(0).find('.panel__content').addClass('panel__content--active');
 
 var scrollFx = function() {
   var ds = doc.scrollTop();

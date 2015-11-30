@@ -1,0 +1,1 @@
+$("textarea").on("focusout",function o(){console.log($(this).val())});
