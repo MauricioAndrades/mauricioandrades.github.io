@@ -7,7 +7,7 @@ $('textarea').on('focusout', function gettext() {
 
 // split text line by line
 
-text.split("/\n");
+text = text.split("/\n");
 console.log(text);
 
 
