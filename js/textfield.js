@@ -16,9 +16,9 @@ $('textarea').on('focusout', function gettext() {
 // .on(events, selector, data, function(e))
 
 // textArr = text.split("/\n");
-console.log("outside gettext");
-console.log(text);
-console.log(textArr);
+// console.log("outside gettext");
+// console.log(text);
+// console.log(textArr);
 
 
 var parse = function(){
@@ -36,4 +36,4 @@ $(function(){
 });
 
 
-console.log("textfield");
+// console.log("textfield");

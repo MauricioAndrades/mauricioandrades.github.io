@@ -53,7 +53,7 @@ var init = function() {
     window.addEventListener('scroll', scrollFx, false);
     window.addEventListener('load', scrollFx, false);
     $('a[href^="#"]').on('click', scrolly);
-    console.log("main.js");
+    // console.log("main.js");
 };
 
 // import script
