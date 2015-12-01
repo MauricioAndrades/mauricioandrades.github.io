@@ -1,12 +1,14 @@
 var text = "";
 var textArr = [];
+var splitArr = [];
 // get textarea innertext on focus out
 $('textarea').on('focusout', function gettext() {
     console.log("inside gettext");
     console.log($(this).val());
     text = $(this).val().split("/\n");
     textArr = $(this).val().split("/\n");
-    var splitArr = textArr.split("\n")
+    splitArr = textArr.split("\n")
+    console.log(splitArr);
 });
 
 // split text line by line
