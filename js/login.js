@@ -27,10 +27,12 @@
             }
         }, false);
 
-        var w = window.open(url,
-            'Spotify',
-            'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
-        );
+        // var w = window.open(url,
+        //     'Spotify',
+        //     'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
+        // );
+
+window.location = url;
 
     }
 
