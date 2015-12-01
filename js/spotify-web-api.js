@@ -1260,36 +1260,25 @@ console.log(token);
 spotifyApi.setAccessToken(token);
 var searchString = "";
 
-console.log("spotify line 1263: "+text);
-
-function callspotify() {
-
-	for (var i = 0; i < text.length; i++) {
-
-		searchString = text[i];
-		spotifyApi.searchTracks(searchString)
-		.then(function(data) {
-			console.log('Search by "Love"', data);
-		}, function(err) {
-			console.error(err);
-		});
-	}
-}
-// SEARCH TRACKS:
 
 
-spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function(err, data) {
-	if (err) console.error(err);
-	else console.log('Artist albums', data);
-});
 
-// get an artist
-// get an artists
-spotifyApi.getArtist('2hazSY4Ef3aB9ATXW7F5w3')
+// search spotify
+
+function callspotify(searchString) {
+	spotifyApi.searchTracks(searchString)
 .then(function(data) {
-	console.log('Artist information', data);
+	console.log(data);
 }, function(err) {
 	console.error(err);
+})};
+
+
+$('window').on('click', function callspotify() {
+	for (var i = 0; i < splitArr.length; i++) {
+		searchString = splitArr[i];
+		console.log(searchString);
+	}
 });
 
 /*  // get multiple artists
