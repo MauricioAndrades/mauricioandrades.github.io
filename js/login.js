@@ -27,10 +27,7 @@
             }
         }, false);
 
-        // var w = window.open(url,
-        //     'Spotify',
-        //     'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
-        // );
+        var token = "";
 
 window.location = url;
 
@@ -57,7 +54,7 @@ window.location = url;
                     // loginButton.style.display = 'none';
                     // resultsPlaceholder.innerHTML = template(response);
                     var hash = window.location.hash;
-                    var token = "";
+                    
 
                     if (hash) {
                       token = window.location.hash.split('&')[0].split('=')[1];
