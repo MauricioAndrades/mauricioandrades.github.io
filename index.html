@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 </head>
 
 <body>
@@ -53,6 +52,7 @@
 				<h1 class="panel_headline">Step 1: Log Into Spotify</h1>
 				<div class="panel_block"></div>
 				<div class="wrap">
+				<!-- LOGIN BUTTON -->
 					<a class="btn inset" href="#" id="btn-login">LOGIN</a>
 				</div>
 			</div>
@@ -97,19 +97,15 @@
 		</form>
 		<div id="results"></div>
 	</div>
+	<script type="text/javascript" src="main.js" defer></script>
 	
-	<script id="results-template" type="text/x-handlebars-template">
-		{{#each albums.items}}
-		<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
-		{{/each}}
-	</script>
 
 
 
-	<script type="text/javascript" src="js/main.js" defer></script>
-	<script type="text/javascript" src="js/login.js" defer></script>
-	<script type="text/javascript" src="js/textfield.js" defer></script>
-	<script type="text/javascript" src="js/hash.js"      defer></script>
 
+	<script type="text/javascript" src="js/textfield.js"></script>
+	<script type="text/javascript" src="js/hash.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/spotify-web-api.js"></script>
 </body>
 </html>

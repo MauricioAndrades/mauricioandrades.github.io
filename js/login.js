@@ -46,14 +46,23 @@
     // var templateSource = document.getElementById('result-template').innerHTML,
         // template = Handlebars.compile(templateSource),
         // resultsPlaceholder = document.getElementById('result'),
-        loginButton = document.getElementById('btn-login');
+        var loginButton = document.getElementById('btn-login');
 
     loginButton.addEventListener('click', function() {
         login(function(accessToken) {
             getUserData(accessToken)
                 .then(function(response) {
-                    loginButton.style.display = 'none';
-                    resultsPlaceholder.innerHTML = template(response);
+                    // loginButton.style.display = 'none';
+                    // resultsPlaceholder.innerHTML = template(response);
+                    var hash = window.location.hash;
+                    var token = "";
+
+                    if (hash) {
+                      token = window.location.hash.split('&')[0].split('=')[1];
+                      // target.postMessage(token, OAuthConfig.host);
+                    }
+
+                    console.log("hash");
                 });
         });
     });
