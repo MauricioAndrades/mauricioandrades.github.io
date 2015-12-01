@@ -1255,3 +1255,52 @@ function getHash() {
 
 spotifyApi.setAccessToken(token);
 
+spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function(err, data) {
+  if (err) console.error(err);
+  else console.log('Artist albums', data);
+});
+
+// get an artist
+// get an artists
+spotifyApi.getArtist('2hazSY4Ef3aB9ATXW7F5w3')
+  .then(function(data) {
+    console.log('Artist information', data);
+  }, function(err) {
+    console.error(err);
+  });
+
+  // get multiple artists
+  spotifyApi.getArtists(['2hazSY4Ef3aB9ATXW7F5w3', '6J6yx1t3nwIDyPXk5xa7O8'])
+    .then(function(data) {
+      console.log('Artists information', data);
+    }, function(err) {
+      console.error(err);
+    });
+
+
+// nested calls
+// track detail information for album tracks
+spotifyApi.getAlbum('5U4W9E5WsYb2jUQWePT8Xm')
+  .then(function(data) {
+    return data.tracks.map(function(t) { return t.id; });
+  })
+  .then(function(trackIds) {
+    return spotifyApi.getTracks(trackIds);
+  })
+  .then(function(tracksInfo) {
+    console.log(tracksInfo);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
+
+// album detail for the first 10 Elvis' albums
+spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', {limit: 10})
+  .then(function(data) {
+    return data.albums.map(function(a) { return a.id; });
+  })
+  .then(function(albums) {
+    return spotifyApi.getAlbums(albums);
+  }).then(function(data) {
+    console.log(data);
+  });
