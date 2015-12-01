@@ -1,93 +1,115 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<title>gschool spotify playlist maker</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </head>
+
 <body>
-  <nav class="nav">
-    <div class="burger"><i class="fa fa-bars"></i>
-      <div class="burger__patty"></div>
-    </div>
-  
-    <!-- MENU -->
-    <ul class="nav__list">
-      <li class="nav__item">
-        <a href="#1" class="nav__link c-blue"><img src="media/spotify.png" style="height: 40px"></a>
-      </li>
-      <li class="nav__item">
-        <a href="#2" class="nav__link c-yellow scrolly"><img src="media/one.png" alt="one_icon" style="height: 40px"> </a>
-      </li>
-      <li class="nav__item">
-        <a href="#3" class="nav__link c-red"><img src="media/two.png" alt="two_icon" style="height: 40px"></a>
-      </li>
-      <li class="nav__item">
-        <a href="#4" class="nav__link c-green"><i class="fa fa-music"></i></a>
-      </li>
-    </ul>
-  </nav>
-  
-  <!-- PANEL ONE -->
-  <section class="panel b-blue" id="1">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h1 class="panel__headline"><img src="media/spotify.png" alt="spotify_icon">Spotify Playlist Maker</h1>
-        <div class="panel__block"></div>
-        <p>1. Log into Spotify<br>
-        2. Paste a list of tracks into the search box<br>
-        3. Create the playlist</p>
-      </div>
-    </article>
-  </section>
-  
-<!-- LOGIN TO SPOTIFY -->
-  <section class="panel b-yellow" id="2">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h1 class="panel__headline">Step 1: Log Into Spotify</h1>
-        <div class="panel__block"></div>
-        <div class="wrap">
-          <a class="btn inset" href="#" id="btn-login">LOGIN</a>
-        </div>
-      </div>
-    </article>
-  </section>
-  
-  <!-- PANEL THREE -->
-  <section class="panel b-red" id="3">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h1 class="panel__headline">Step 2: Create a text list of tracks</h1>
-        <div class="panel__block"></div>
-        <div class="container">
-            <p><b>Type:</b> Artist Name - Track Title</p>
+	<nav class="nav">
+		<div class="burger"><i class="fa fa-bars"></i>
+			<div class="burger_patty"></div>
+		</div>
 
-        </div>
+		<!-- MENU -->
+		<ul class="nav_list">
+			<li class="nav_item">
+				<a href="#1" class="nav_link c-blue"><img src="media/spotify.png" alt="spotify_png" style="height: 40px"></a>
+			</li>
+			<li class="nav_item">
+				<a href="#2" class="nav_link c-yellow scrolly"><img src="media/one.png" alt="one_icon" style="height: 40px"> </a>
+			</li>
+			<li class="nav_item">
+				<a href="#3" class="nav_link c-red"><img src="media/two.png" alt="two_icon" style="height: 40px"></a>
+			</li>
+			<li class="nav_item">
+				<a href="#4" class="nav_link c-green"><i class="fa fa-music"></i></a>
+			</li>
+		</ul>
+	</nav>
 
-        <form id="textarea_form">
-          <textarea id="txtarea" cols="50" style="margin: 0px; width: 782px; height: 101px;">Artist - Track Title</textarea>
-        </form>
-      </div> 
-    </article>
-  </section>
-  
-  <!-- PANEL FOUR -->
-  <!-- RESULTS -->
-  <section class="panel b-green" id="4">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h1 class="panel__headline">RESULTS</h1>
-        <div class="panel__block"></div>
-        <p>Result Boxes</p>
-      </div>
-    </article>
-  </section>
-  
+	<!-- PANEL ONE -->
+	<section class="panel b-blue" id="1">
+		<article class="panel_wrapper">
+			<div class="panel_content">
+				<h1 class="panel_headline"><img src="media/spotify.png" alt="spotify_icon">Spotify Playlist Maker</h1>
+				<div class="panel_block"></div>
+				<p>1. Log into Spotify<br>
+				2. Paste a list of tracks into the search box<br>
+				3. Create the playlist</p>
+			</div>
+		</article>
+	</section>
 
-  <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
-  <script type="text/javascript" src="js/textfield.js"></script>
+	<!-- LOGIN TO SPOTIFY -->
+	<section class="panel b-yellow" id="2">
+		<article class="panel_wrapper">
+			<div class="panel_content">
+				<h1 class="panel_headline">Step 1: Log Into Spotify</h1>
+				<div class="panel_block"></div>
+				<div class="wrap">
+					<a class="btn inset" href="#" id="btn-login">LOGIN</a>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<!-- PANEL THREE -->
+	<section class="panel b-red" id="3">
+		<article class="panel_wrapper">
+			<div class="panel_content">
+				<h1 class="panel_headline">Step 2: Create a text list of tracks</h1>
+				<div class="panel_block"></div>
+				<div class="container">
+						<p><b>Type:</b> Artist Name - Track Title</p>
+				</div>
+
+				<form id="textarea_form">
+					<textarea id="txtarea" cols="50" style="margin: 0px; width: 782px; height: 101px;">Artist - Track Title</textarea>
+				</form>
+			</div>
+		</article>
+	</section>
+
+	<!-- PANEL FOUR -->
+	<!-- RESULTS -->
+	<section class="panel b-green" id="4">
+		<article class="panel_wrapper">
+			<div class="panel_content">
+				<h1 class="panel_headline">RESULTS</h1>
+				<div class="panel_block"></div>
+				<p>Result Boxes</p>
+			</div>
+		</article>
+	</section>
+
+	<!-- test -->
+	<div class="container">
+		<h1>Search for an Artist</h1>
+		<form id="search-form">
+			<input type="text" id="query" value="" class="form-control" />
+			<input type="submit" id="search" class="btn btn-primary" value="Search" />
+		</form>
+		<div id="results"></div>
+	</div>
+	
+	<script id="results-template" type="text/x-handlebars-template">
+		{{#each albums.items}}
+		<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+		{{/each}}
+	</script>
+
+
+
+	<script type="text/javascript" src="js/main.js" defer></script>
+	<script type="text/javascript" src="js/login.js" defer></script>
+	<script type="text/javascript" src="js/textfield.js" defer></script>
+	<script type="text/javascript" src="js/hash.js"      defer></script>
+
 </body>
 </html>

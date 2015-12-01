@@ -1,0 +1,1 @@
+{"version":3,"sources":["../hash.js"],"names":["hash","window","location","token","split"],"mappings":"AACA,GAAIA,MAAOC,OAAOC,SAASF,KACvBG,MAAQ,EAERH,QACFG,MAAQF,OAAOC,SAASF,KAAKI,MAAM,KAAK,GAAGA,MAAM,KAAK","file":"hash-min.js"}
