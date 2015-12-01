@@ -1,4 +1,5 @@
 var text = "";
+var textArr = [];
 // get textarea innertext on focus out
 $('textarea').on('focusout', function gettext() {
     console.log($(this).val());
@@ -7,8 +8,10 @@ $('textarea').on('focusout', function gettext() {
 
 // split text line by line
 
-text = text.split("/\n");
+
+textArr = text.split("/\n");
 console.log(text);
+console.log(textArr);
 
 
 var parse = function(){
