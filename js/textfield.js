@@ -4,12 +4,13 @@ var textArr = [];
 $('textarea').on('focusout', function gettext() {
     console.log($(this).val());
     text = $(this).val().split("/\n");
+    textArr = $(this).val().split("/\n");
 });
 
 // split text line by line
 
 
-textArr = text.split("/\n");
+// textArr = text.split("/\n");
 console.log(text);
 console.log(textArr);
 
