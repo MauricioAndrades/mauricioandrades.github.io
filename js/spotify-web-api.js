@@ -1251,11 +1251,24 @@ function getHash() {
   }
 }
 
-debugger;
+
 getHash();
+console.log(hash);
+console.log(token);
 
 
 spotifyApi.setAccessToken(token);
+var searchString = "";
+
+console.log("spotify line 1263: "+text);
+
+// SEARCH TRACKS:
+spotifyApi.searchTracks(searchString)
+  .then(function(data) {
+    console.log('Search by "Love"', data);
+  }, function(err) {
+    console.error(err);
+  });
 
 spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function(err, data) {
   if (err) console.error(err);
