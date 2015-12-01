@@ -1,4 +1,5 @@
 'use strict';
+
 var SpotifyWebApi = (function() {
 
 	var _baseUri = 'https://api.spotify.com/v1';
@@ -1238,13 +1239,17 @@ var SpotifyWebApi = (function() {
 		module.exports = SpotifyWebApi;
 	}
 
-// initialize wrapper
+// INITIALIZE WRAPPER
 var spotifyApi = new SpotifyWebApi();
 
-// start get hash
+/************************************/
+/*GETHASH*/
 var hash = window.location.hash;
+
+/*INITIALIZE EMPTY TOKEN*/
 var token = "";
 
+/*STORE HASH FROM SERVER RESPONSE*/
 function getHash() {
 	if (hash) {
 		token = window.location.hash.split('&')[0].split('=')[1];
@@ -1253,35 +1258,45 @@ function getHash() {
 
 
 getHash();
-console.log(hash);
-console.log(token);
 
 
 spotifyApi.setAccessToken(token);
 var searchString = "";
 
-
-
-
-// search spotify
+/*SEARCH SPOTIFY*/
 
 function callspotify(searchString) {
-	spotifyApi.searchTracks(searchString)
-.then(function(data) {
-	console.log(data);
-}, function(err) {
-	console.error(err);
-})};
+    spotifyApi.searchTracks(searchString)
+        .then(function(data) {
+            console.log(data);
+        }, function(err) {
+            console.error(err);
+        })
+};
 
 
-$('window').on('click', function callspotify() {
-	for (var i = 0; i < splitArr.length; i++) {
-		searchString = splitArr[i];
-		console.log(searchString);
-	}
+
+$(window).on('click', function() {
+    for (var i = 0; i < splitArr.length; i++) {
+        searchString = splitArr[i];
+        callspotify(searchString);
+    }
 });
 
-/*  // get multiple artists
+
+
+// SELF INVOKING EVENTBINDING
+/*(function() {
+	$(window).on('click', function() {
+		for (var i = 0; i < splitArr.length; i++) {
+			searchString = splitArr[i];
+			callspotify(searchString);
+		}
+	});
+})();*/
+
+
+/*  // GET MULTIPLE ARTISTS
 	spotifyApi.getArtists(['2hazSY4Ef3aB9ATXW7F5w3', '6J6yx1t3nwIDyPXk5xa7O8'])
 		.then(function(data) {
 			console.log('Artists information', data);
@@ -1290,7 +1305,7 @@ $('window').on('click', function callspotify() {
 		});*/
 
 
-/*// nested calls
+/*// NESTED CALLS
 // track detail information for album tracks
 spotifyApi.getAlbum('5U4W9E5WsYb2jUQWePT8Xm')
 	.then(function(data) {
@@ -1304,15 +1319,4 @@ spotifyApi.getAlbum('5U4W9E5WsYb2jUQWePT8Xm')
 	})
 	.catch(function(error) {
 		console.error(error);
-	});*/
-
-/*// album detail for the first 10 Elvis' albums
-spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', {limit: 10})
-	.then(function(data) {
-		return data.albums.map(function(a) { return a.id; });
-	})
-	.then(function(albums) {
-		return spotifyApi.getAlbums(albums);
-	}).then(function(data) {
-		console.log(data);
 	});*/
