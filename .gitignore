@@ -1,3 +1,8 @@
 codebin.html
 codebin.md
 ignore
+bower_components
+codebin.txt
+js/login.js
+js/hash.js
+js/min
